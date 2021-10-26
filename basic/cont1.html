@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const
+      // 1. 값 변경 불가
+      //   const PI = 3.14159265;
+      //   PI = 3.14; //TypeError: Assignment to constant variable.다시 값을 주는 것은 불가능하다.
+      // 2. 선언 시 값 부여 (필수)
+      //   const PI;
+      //   PI = 3.14159265; //SyntaxError: Missing initializer in const declaration. 상수나 변수를 선언할 때 값을 줘야한다.
+      // 3. block scope 가짐
+      const x = 10;
+      {
+        const x = 2;
+      }
+      console.log(x);
+    </script>
+  </body>
+</html>
