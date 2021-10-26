@@ -7,19 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <h2>객체 생성해보기</h2>
+    <h2>두번째 객체 생성</h2>
     <script>
-      var student = {
-        name: "홍길동",
-        kor: 95,
-        math: 98,
-        eng: 96,
-        sci: 98,
-      };
+      // 객체 생성(중가로)
+      var student = new Object();
+      student.name = "홍길동";
+      student.kor = 95;
+      student.math = 98;
+      student.eng = 96;
+      student.sci = 98;
+
       document.write(student.name + "<br>");
-      document.write(student.kor + "<br>");
+      document.write(student["kor"] + "<br>"); // student.kor 같은 의미
       document.write(student.math + "<br>");
-      document.write(student.eng + "<br>");
+      document.write(student["eng"] + "<br>");
       document.write(student.sci + "<br>");
     </script>
   </body>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userName = prompt("소문자로 영문 이름 입력 : ");
+      let tel = prompt("전화번호 입력(형식 : 000-0000-0000) : ");
+      // let msg = "hellow javascript";
+      // 입력ㅂ다은 userName 은 대문자로 출력
+      document.write("사용자 이름 : ", userName.toUpperCase(), "<br>");
+      // 입력받은 tel 은 가운데 자리를 ####으로 변환하여 출력
+      document.write("전화번호 : ", tel.replace(tel.substring(4, 8), "####"));
+    </script>
+  </body>
+</html>
