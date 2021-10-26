@@ -9,10 +9,11 @@
   <body>
     <p id="demo"></p>
     <script>
+      const cars = "BMWVolvoSaabFordAudi";
       let text = "";
-      for (var i = 0; i < 10; i++) {
-        console.log(i);
-        text += i + "<br>";
+      for (let car of cars) {
+        // of :  값의 하나씩을 부른다.
+        text += car + "<br>";
       }
       document.getElementById("demo").innerHTML = text;
     </script>

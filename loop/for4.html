@@ -9,10 +9,12 @@
   <body>
     <p id="demo"></p>
     <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford", "Audi"];
       let text = "";
-      for (var i = 0; i < 10; i++) {
-        console.log(i);
-        text += i + "<br>";
+      for (let car of cars) {
+        // car 는 cars의 변수 첫번째 값을 받는다 java 향상 for 같다
+        // console.log(cars[i]);
+        text += car + "<br>";
       }
       document.getElementById("demo").innerHTML = text;
     </script>

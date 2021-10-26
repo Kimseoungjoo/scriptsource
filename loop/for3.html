@@ -9,10 +9,12 @@
   <body>
     <p id="demo"></p>
     <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford", "Audi"];
       let text = "";
-      for (var i = 0; i < 10; i++) {
-        console.log(i);
-        text += i + "<br>";
+      for (let car in cars) {
+        // in은 car > index로 받는다
+        // console.log(cars[i]);
+        text += cars[car] + "<br>";
       }
       document.getElementById("demo").innerHTML = text;
     </script>
