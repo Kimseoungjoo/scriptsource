@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사용자로 부터 국어, 영어, 수학 점수를 입력 받은 후 평균을 구해서
+      // 90점 이상이면 "A", 80점이상이면 "B", 70 이상이면 "C" ,>=60 D, F
+
+      // prompt() => 문자로 입력됨
+      // String 문자열 >>> Number 정수형 변환
+      // parseInt(문자열), Number(문자열);
+      let kor = Number(prompt("국어점수 입력"));
+      let math = Number(prompt("수학점수 입력"));
+      let eng = Number(prompt("영어점수 입력"));
+
+      let avg = (kor + math + eng) / 3;
+
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9:
+          console.log("A");
+          break;
+        case 8:
+          console.log("B");
+          break;
+        case 7:
+          console.log("C");
+          break;
+        case 6:
+          console.log("D");
+          break;
+        default:
+          console.log("F");
+          console.log(avg);
+          break;
+      }
+    </script>
+  </body>
+</html>
