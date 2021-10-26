@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>javascript function</h2>
+    <p id="demo"></p>
+    <script>
+      function myFunction(p1, p2) {
+        return p1 * p2;
+      }
+      let result = myFunction(4, 5);
+
+      // body 특정 요소 찾기
+      document.getElementById("demo").innerHTML = result; // ***** THIS code so important
+      // document.write(result)와 차이점은 getEl... 방식은 태그 값 사이에 넣어주고
+      // document.write는 모든 태그가 끝나고 찍어주는 방식이다
+    </script>
+  </body>
+</html>
