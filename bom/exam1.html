@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="picture.jpg" alt="풍경" />
+    <button type="button" onclick="changeImage()">이미지 변경</button>
+    <script>
+      function changeImage() {
+        //버튼 클릭시 이미지 변경
+        // 이미지 변경 src, alt수정
+
+        const img = document.querySelector("img");
+        if (img.getAttribute("src") == "picture.jpg") {
+          img.src = "1.jpg";
+          img.alt = "시간";
+        } else {
+          img.src = "picture.jpg";
+          img.alt = "풍경";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(4, 5, 7, 0.774);
+        color: rgba(255, 255, 0, 0.822);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" class="header" onclick="change()">Header1</h1>
+    <h2>Header2</h2>
+    <button type="button" onclick="removeEle()">제거</button>
+    <script>
+      function removeEle() {
+        // 제거할 요소 가져오기
+        let h1 = document.querySelector("h1");
+        //body 제거
+        document.body.removeChild(h1);
+      }
+      function change() {
+        // 속성 제거
+        let h1 = document.querySelector("h1");
+        h1.removeAttribute("class");
+      }
+    </script>
+  </body>
+</html>
