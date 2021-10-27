@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" id="num1" name="num1" />
+        <select name="op" id="op">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+
+        <input type="text" id="num2" name="num2" />
+        <input type="text" id="result" name="result" />
+        <button type="button" onclick="process()">계산</button>
+      </div>
+    </form>
+    <script>
+      function process() {
+        // num1,num2,result 요소 가져오기
+        // let num1 = Number(document.querySelector("#num1").value);
+        let num1 = document.querySelector("#num1");
+        let num2 = document.querySelector("#num2");
+        let op = document.querySelector("#op");
+        let result = document.querySelector("#result");
+
+        // 요소가 가지고 있는 값 가져오기(num1,num2,op)
+        // op에 따라서 사칙연산 추가
+        let result1 = 0;
+        let numValue1 = Number(num1.value);
+        let numValue2 = Number(num2.value);
+        switch (op.value) {
+          case "+":
+            // var re = Number(num1.value) + Number(num2.value);
+            result1 = numValue1 + numValue2;
+            break;
+          case "-":
+            result1 = numValue1 - numValue2;
+            // var re = Number(num1.value) - Number(num2.value);
+            break;
+          case "*":
+            result1 = numValue1 * numValue2;
+            // var re = Number(num1.value) * Number(num2.value);
+            break;
+          case "/":
+            result1 = numValue1 / numValue2;
+            // var re = Number(num1.value) / Number(num2.value);
+            break;
+        }
+        // 덧셈을 한 결과를 result에 보여주기
+        result.value = result1;
+      }
+    </script>
+  </body>
+</html>
