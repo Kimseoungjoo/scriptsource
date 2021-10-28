@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>클릭하면 사라집니다.</h2>
+    <p class="para1">이것은 문단입니다.</p>
+    <p id="para2">이것은 두번쨰 문단입니다.</p>
+    <button type="button">클릭</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $("body *").hide();
+        });
+
+        // $(".para1").mouseover(function () {
+        //   alert("경고");
+        // });
+
+        // 여러개의 이벤트를 할 떄 편함
+        // $(".para1").on("mouseover mouseout focus", function () {
+        //   alert("마우스를 이동했습니다 ");
+        // });
+      });
+    </script>
+  </body>
+</html>

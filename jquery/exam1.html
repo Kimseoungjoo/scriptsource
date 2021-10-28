@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="picture.jpg" alt="풍경" />
+    <button type="button">이미지 변경</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          const img = $("img"); //document.querySelector("img");
+
+          if (img.getAttribute("src") == "picture.jpg") {
+            img.attr("src", "1.jpg"); //img.src = "1.jpg";
+            img.attr("alt", "시간"); //img.alt = "시간";
+          } else {
+            img.attr("src", "picture.jpg"); //img.src = "picture.jpg";
+            img.attr("alt", "풍경"); //img.alt = "풍경";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
