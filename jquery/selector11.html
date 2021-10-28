@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <input type="text" />
+      </div>
+      <div>
+        <a href="http://www.naver.com">네이버</a>
+      </div>
+      <div><input type="text" name="usename" /></div>
+      <div><input type="password" name="userid" /></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // input 안에 들어있는 값을 가져올 때
+        // $("[type='text']").val(); // val() = .value랑 같당
+
+        // input 안에 값을 보여주고 싶을 때
+        // val(보여주고 싶은 값)
+        // document.querySelector("").value = "Hello jQuery!!";
+        // $("[type='text']").val("Hello jQuery!!!");
+
+        // $(":text").val("Hello jQuery!!");
+        // $(":text:first").val("Hello jQuery!!");
+        // $(":text:last']").val("Hello jQuery!!");
+        $("a[href^='http']").css("background-color", "#bbf");
+        $(":password").css("background-color", "lightgray");
+      });
+    </script>
+  </body>
+</html>

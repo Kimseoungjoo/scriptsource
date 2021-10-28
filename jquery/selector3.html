@@ -22,17 +22,9 @@
         // h2 요소 가져오기
         // $("h2")
         //h2 요소가 클릭이 되면 숨기기
-        $("h2").click(function () {
+        $("h2, .para1, #para2").click(function () {
           $("h2").hide();
         });
-      });
-      //para1 요소는 가져온 후 글자 색상을 변경
-      $(".para1").click(function () {
-        $(this).css("color", "#669900");
-      });
-      // para2 요소는 숨기기
-      $("#para2").click(function () {
-        $(this).hide();
       });
     </script>
   </body>
