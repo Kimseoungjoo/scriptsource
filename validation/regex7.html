@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ko = "kokoko";
+      const koooo = "kooookoooo";
+
+      // ko+ == k는 하나만 나오고 o는 (1~무한대 )
+      console.log(ko.match(/ko+/));
+      console.log(koooo.match(/ko+/));
+      console.log("");
+      console.log(ko.match(/(ko)+/));
+      console.log(koooo.match(/(ko)+/)); // console 에 나오는 1번 결과값을 캡쳐링이라고 한다.
+      console.log("");
+
+      // 괄호는 썼는데 캡쳐는 안함  >>
+      console.log(ko.match(/(?:ko)+/));
+      console.log(koooo.match(/(?:ko)+/));
+      console.log("");
+
+      //\w == [A-Za-z0-9_]+
+      //\s 공백 , newline, tab의 의미를 가지고 있다
+      let reg = /(\w+)\s(\w+)/;
+      let str = "John Smith";
+      console.log(str.match(reg));
+      console.log("");
+      let newStr = str.replace(reg, "$2, $1");
+      console.log(newStr);
+
+      const input =
+        "Regex pros know the difference between\n" +
+        "<i>greedy</i> and <i>lazy</i> matching.";
+
+      let regex = /<i>(.*?)<\/i>/gi;
+      console.log(input.match(regex));
+      console.log(input.replace(regex, "<strong>$1<\/strong>"));
+    </script>
+  </body>
+</html>

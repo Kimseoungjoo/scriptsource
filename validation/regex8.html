@@ -19,36 +19,22 @@
 
     <form action="">
       <div>
-        <label for="">이름</label>
-        <input type="text" name="name" />
-      </div>
-      <div>
-        <button type="button" onclick="nameCheck()">전송</button>
+        <label for="">비밀번호</label>
+        <input type="text" name="password" onkeyup="pwdCheck(this.value)" />
       </div>
     </form>
     <p id="result" style="color: red"></p>
     <script>
       let result = document.querySelector("#result");
-      function nameCheck() {
-        // 이름 가져오기
-        let name = document.querySelector("[name='name']").value;
-        let reg = /^[가-힣]{2,5}$/; // ^[가-힣]
-        // 이름 유효성검증
-        // 이름은 한글이어야 한다.
-        // 이름은 최소 2, 최대 5자리까지만 허용한다.
-        let flag = reg.test(name);
-        if (!flag) {
-          if (name.length > 5 || name.length < 2) {
-            result.style.color = "red";
-            result.innerText = "이름은 최소 2글자 5글자 이하입니다.";
-          } else {
-            result.style.color = "red";
-            result.innerText = "이름은 한글이여야합니다";
-          }
-        } else {
-          result.style.color = "green";
-          result.innerText = "이름 작성완료";
-        }
+      function pwdCheck(password) {
+        console.log(password);
+
+        //비밀번호 유효성 검증
+        // 영대문자, 숫자, 특수문자(#,$,!)
+        // 비밀번호 길이는 8~15
+        const reg = /^(?=.*[A-Za-z])(?=.*[\d])(?=.*[#$!])[A-Za-z\d#$!]{8,15}$/;
+
+        result.innerHTML = reg.test(password);
       }
     </script>
   </body>
