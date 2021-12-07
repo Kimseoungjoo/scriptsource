@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //add();
+      //callback();
+      // hosting 허용
+      //function add() {}
+      //function add(a, b) {}
+
+      // hosting 허용하지 않음
+      // 익명함수
+
+      function callTimes(callback) {
+        for (let i = 0; i < 5; i++) {
+          callback();
+        }
+      }
+      const callback = function () {
+        alert("함수호출");
+      };
+
+      callTimes(callback);
+    </script>
+  </body>
+</html>
